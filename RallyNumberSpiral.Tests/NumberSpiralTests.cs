@@ -5,8 +5,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using RallyNumberSpiral;
-
 namespace RallyNumberSpiral.Tests
 {
     [TestClass]
