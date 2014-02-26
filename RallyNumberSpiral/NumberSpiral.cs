@@ -15,7 +15,13 @@ namespace RallyNumberSpiral
     /// This class accepts an integer and prints the integers from 0 to the 
     /// input integer in a spiral format.  It does this by performing the following:
     /// 1. Create a 2 dimentional array to hold all the numbers
-    /// 2. Determine the starting index of the array
+    ///     The array is indexed in a cartesian coordinate fasion with the X
+    ///     coordinate running Left-Right with right being the positive direction,
+    ///     and left the negative.  The Y coordinate runs Up-Down with down being
+    ///     positive direction and up being negative.  This allows the algorithm to
+    ///     easily keep track of what index is currently being written to, and which
+    ///     index to move to for the next number.
+    /// 2. Determine what index of the array to start adding numbers
     /// 3. Write the current number in that index
     /// 4. Move to the next index
     /// 5. Repeat 3 and 4 until the input integer is reached
@@ -86,7 +92,7 @@ namespace RallyNumberSpiral
         //These indicate where in the spiral array to write the next number
         private int X_Index, Y_Index;
 
-        //These indicate where to move the indices once a number is written 
+        //These indicate which direction to move the indices once a number is written 
         //to the spiral array
         private X_Movement X_Direction;
         private Y_Movement Y_Direction;
